@@ -1,70 +1,49 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Toggle App - Random Number Generator
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+This Toggle App is a React based web application that demonstrates the creation of reusable components, data passing with props, and conditional rendering. The app generates random numbers between 1 and 100 and displays them in three reusable `Card` components. Each `Card` shows the number and a label ("High" if > 50, "Low" if ≤ 50) using a ternary operator for conditional rendering. The project uses modern JavaScript (arrow functions with implicit returns) and CSS for styling.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+This project fulfills the requirements of a lab focused on React fundamentals, showcasing component based architecture, props, and dynamic rendering.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Project Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```plaintext
+toggle_app/
+├── public/
+│   ├── index.html
+│   └── manifest.json
+├── src/
+│   ├── App.js           # Main component with random number generator and Card rendering
+│   ├── Card.js          # Reusable Card component with conditional rendering
+│   ├── App.css          # Styles for the app
+│   ├── index.js
+│   └── index.css
+├── package.json         # Project dependencies and scripts
+├── README.md            
+└── node_modules/
+```
 
-### `npm run build`
+- **App.js**: Defines the `App` component, which uses an arrow function (`randNum`) to generate random numbers and renders three `Card` components with `num` props.
+- **Card.js**: A functional component that accepts a `num` prop and conditionally renders "High" (> 50) or "Low" (≤ 50) using a ternary operator.
+- **App.css**: Contains styles for centering the app, styling cards, and setting a clean background.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Key Features
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Reusable Components**: The `Card` component is reused three times with different random numbers.
+- **Props**: Random numbers are passed from the `App` component to `Card` components via the `num` prop.
+- **Conditional Rendering**: Each `Card` uses a ternary operator to display "High" or "Low" based on the number.
+- **Arrow Functions**: The `randNum` function uses an arrow function with implicit return for random number generation.
+- **Styling**: CSS ensures a responsive layout with centered cards.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Key Takeaways
 
-### `npm run eject`
+- **React Components**: The app demonstrates building React applications with modular, reusable components (`App` and `Card`).
+- **Props**: Data is passed from the parent (`App`) to child (`Card`) components using props.
+- **Arrow Functions**: The `randNum` function showcases concise JavaScript with implicit returns.
+- **Conditional Rendering**: The ternary operator in `Card` dynamically displays content based on prop values.
+- **Reusable Design**: The `Card` component can display any number, making it highly reusable.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
